@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Bird Concentration Game</title>
+ <META NAME="AREA" CONTENT="quizzes and a game for children">
+<META HTTP-EQUIV="AUDIENCE" CONTENT="General">
+<META NAME="AUTHOR" CONTENT="Dave Pelletier">
+<META HTTP-EQUIV="CHARSET" CONTENT="text/html; charset="ISO-8859-1">
+<META HTTP-EQUIV="Content-language" CONTENT="en-US">
+<META NAME="COPYRIGHT" CONTENT="Dave Pelletier, webmaster, 2005">
+<META NAME="DESCRIPTION" CONTENT="A page just for the Kids. We have nature quizzes, games, and links to other game sites for children.">
+<META NAME="ABSTRACT" CONTENT="A page just for the Kids. We have a math quiz, games, and links to other game sites for children.">
+<META NAME="GENERATOR" CONTENT="Dreamweaver/Notepad">
+<meta name=keywords content=kids, safe, family, quiz, friendly, games, quizzes, nature, links>
+<META HTTP-EQUIV="Pragma" CONTENT="NO INDEX/NO FOLLOW">
+<META NAME="PLACENAME" CONTENT="Connecticut, USA">
+<META NAME="RATING" CONTENT="General">
+<META NAME="revisit-after" CONTENT="14 FIFTEEN DAYS">
+<META NAME="SUBJECT" CONTENT="A page for children.">
+<META NAME="TITLE" CONTENT="Wing Watchers.com">
+<style>
+a{
+text-decoration:none;
+}
+</style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <style type="text/css">
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+background:url(images1/tt4.jpg);;                                                                                                                                                                                                         background-repeat:repeat xy;                                                                                                                                                                                                             }
+
+b{font-size: 120%;}
+em{color: red;}
+
+#maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+background:#D1E0B2;                                                                                                                                                                                                                      margin-top:30px;                                                                                                                                                                                                                              border:7px darkslategray double;                                                                                                                                                                                                        }
+
+#topsection{
+background: whitesmoke;
+height: 50px; /*Height of top section*/
+border-bottom:2px black dotted;                                                                                                                                                                                                          padding-top:20px;                                                                                                                                                                                                                             text-align:center;                                                                                                                                                                                                                               }
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+margin-top:40px;                                                                                                                                                                                                                                }
+
+#contentcolumn{
+margin: 0 175px 0 175px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+ width: 175px; /*Width of left column in pixel*/
+margin-left: -840px; /*Set margin to that of -(MainContainerWidth)*/
+background: #D1E0B2;
+margin-top:10px;                                                                                                                                                                                                                                }
+
+#rightcolumn{
+float: left;
+width: 175px; /*Width of right column*/
+margin-left: -175px; /*Set left margin to -(RightColumnWidth)*/
+background: #D1E0B2;
+margin-top:10px;                                                                                                                                                                                                                                }
+
+#footer{
+clear: left;
+width: 100%;
+background: whitesmoke;
+color: black;
+text-align: center;
+padding: 4px 0;
+border-top:2px black dotted;                                                                                                                                                                                                               }
+
+#footer a{
+color: black;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+<!-- Original:  Brian Gosselin (bgaudiodr@aol.com) -->
+<!-- Web Site:  http://www.bgaudiodr.iwarp.com -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var pics = new Array();
+for (i = 0; i <= 18; i++) {
+pics[i] = new Image();
+pics[i].src = 'image' + i + '.gif';
+}
+var map=new Array(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18);
+var user = new Array();
+var temparray = new Array();
+var clickarray = new Array(0, 0);
+var ticker, sec, min, ctr, id, oktoclick, finished;
+function init() {
+clearTimeout(id);
+for (i = 0; i <= 35 ;i++) {
+user[i] = 0;
+}
+ticker = 0;
+min = 0;
+sec = 0;
+ctr = 0;
+oktoclick = true;
+finished = 0;
+document.f.b.value = "";
+scramble();
+runclk();
+for (i = 0; i <= 35; i++) {
+document.f[('img'+i)].src = "image0.gif";
+   }
+}
+function runclk() {
+min = Math.floor(ticker/60);
+sec = (ticker-(min*60))+'';
+if(sec.length == 1) {sec = "0"+sec};
+ticker++;
+document.f.b.value = min+":"+sec;
+id = setTimeout('runclk()', 1000);
+}
+function scramble() {
+for (z = 0; z < 5; z++) {
+for (x = 0; x <= 35; x++) {
+temparray[0] = Math.floor(Math.random()*36);
+temparray[1] = map[temparray[0]];
+temparray[2] = map[x];
+map[x] = temparray[1];
+map[temparray[0]] = temparray[2];
+      }
+   }
+}
+function showimage(but) {
+if (oktoclick) {
+oktoclick = false; 
+document.f[('img'+but)].src = 'image'+map[but]+'.gif';
+if (ctr == 0) {
+ctr++;
+clickarray[0] = but;
+oktoclick = true;
+} else {
+clickarray[1] = but;
+ctr = 0;
+setTimeout('returntoold()', 600);
+      }
+   }
+}
+function returntoold() {
+if ((clickarray[0] == clickarray[1]) && (!user[clickarray[0]])) {
+document.f[('img'+clickarray[0])].src = "image0.gif";
+oktoclick = true;
+} else {
+if (map[clickarray[0]] != map[clickarray[1]]) {
+if (user[clickarray[0]] == 0) {
+document.f[('img'+clickarray[0])].src = "image0.gif";
+}
+if (user[clickarray[1]] == 0) {
+document.f[('img'+clickarray[1])].src = "image0.gif";
+   }
+}
+if (map[clickarray[0]] == map[clickarray[1]]) {
+if (user[clickarray[0]] == 0&&user[clickarray[1]] == 0) { finished++; }
+user[clickarray[0]] = 1;
+user[clickarray[1]] = 1;
+}
+if (finished >= 18) {
+alert('You did it in '+document.f.b.value+' !');
+init();
+} else {
+oktoclick = true;
+      }
+   }
+}
+//  End -->
+</SCRIPT>
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><span style="font-family:verdana,helvetica,arial,system;color:darkslateblue;font-style:bold;font-size:34px;text-align:center;"><i>Bird Concentration</i></span></div>
+</div>
+
+<div id="contentwrapper">
+<div id="contentcolumn">
+<div class="innertube"><div align="center"><FORM NAME="f"> 
+<TABLE align="center" CELLPADDING="0" CELLSPACING="0" BORDER="2" bordercolor="black">
+<SCRIPT LANGUAGE="javascript">
+<!-- Begin
+for (r = 0; r <= 5; r++) {
+document.write('<tr>');
+for (c = 0; c <= 5; c++) {
+document.write('<td align="center">');
+document.write('<a href="javascript:showimage('+((6*r)+c)+')" onClick="document.f.b.focus()">');
+document.write('<img src="image0.gif" name="img'+((6*r)+c)+'" border="0">');
+document.write('</a></td>');
+}
+document.write('</tr>');
+}
+// End -->
+</SCRIPT>
+</TABLE><br>
+<INPUT TYPE="button" VALUE="Timer" NAME="b" onClick="init()">
+</FORM></div></div>
+<div class-"innertube"><div style="width:50px;height:20px;border:4px black solid; padding:10px;margin-left:205px;background:darksalmon;text-align:center;"><a href="kidmore.html"><b>Back</b></a></div></div></div>
+</div>
+
+<div id="leftcolumn">
+<div class="innertube"><div style="width:175px;height:300px;border:10px black solid;background:#B0C4DE;font-family:verdana,helvetica,arial;font-size:14px;color:midnightblue;text-indent:5px;padding:5px;">Here is how to play this game. First, click the TIMER to start. Then click on two squares. If they match, they will remain showing. Keep going until you match them all. One catch, there is a timer. Play again and beat your own time. Have fun!</div></div>
+<div class="innertube"><div style="width:170px;height:120px;border:5px firebrick solid;padding:5px;background:whitesmoke;margin-top:-40px;margin-left:40px;font-family:verdana,helvetica,arial;font-size:16px;color:darkslateblue;text-indent:5px;">Click Timer again to restart. I did it in 3 minutes flat. You try!.</div></div>                           
+</div>
+
+<div id="rightcolumn">
+    <div class="innertube"><div style="width:205px;height:225px;background:#F89F6D;border:2px black solid;margin-top:-30px;margin-left:-30px;padding:10px;"><img src="images1/fox2a.jpg" width="200px" height="163px" border="2" bordercolor="black"><br><span style="font-family:verdana,helvetica,arial;font-size:14px;font-style:italic;color:black;padding-left:15px;">What wild animal is this?<br>Find answer <a href="naturephotos3.html"><i>HERE</i></a></span></div></div>
+    </div>
+<div id="footer"><a href="http://www.godaddy.com/default.aspx">Hosted By: Go Daddy.com</a> ........ <a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a> ........ <a href="http://www.wingwatchers.com/">&copy;2002 - 2011 Wing Watchers.com</a></div>
+
+</div>
+</body>
+</html>

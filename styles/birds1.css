@@ -1,0 +1,57 @@
+<style type="text/css">
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+b{font-size: 120%;}
+em{color: black;}
+em{font-size:20px;}
+h2{font-size:20px;color:khaki;}                                                                                                                                                                         a:link {color:black;}      /* unvisited link */
+a:visited {color:darkslateblue;}  /* visited link */
+a:hover {color:#FF00FF;}  /* mouse over link */
+a:active {color:black;}  /* selected link */                                                                                                                                                                                              #maincontainer{
+width: 840px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+border:4px sienna double;                                                                                  background:#716555;                                                                         padding:10px;                                                                                   margin-top:30px;                                                                                       }
+                                                                                                #topsection{
+background: tan;
+height:70px; /*Height of top section*/
+margin-top:10px;                                                                                       border:4px black double;                                                                                  padding:10px;                                                                           color:black;                                                                                    }
+                                                                                                #topsection h1{
+margin: 0;
+padding-top: 10px;
+}
+                                                                                                #contentwrapper{
+float: left;
+width: 100%;
+margin-top:5px;                                                                                       }
+#contentcolumn{
+margin: 0 30px 0 30px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+                                                                                                #leftcolumn{
+float: left;
+width: 30px; /*Width of left column in pixel*/
+margin-left: -840px; /*Set margin to that of -(MainContainerWidth)*/
+text-align:center;                                                                                   }
+                                                                                                #rightcolumn{
+float: left;
+width: 30px; /*Width of right column*/
+margin-left: -30px; /*Set left margin to -(RightColumnWidth)*/
+}
+                                                                                                #footer{
+clear: left;
+width: 100%;
+background: #716555;
+color: midnightblue;
+text-align: center;
+padding: 4px 0;
+}
+#footer a{
+color: black;
+}
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+</style>

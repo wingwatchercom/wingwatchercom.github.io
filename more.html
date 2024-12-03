@@ -1,0 +1,123 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+  <HTML>
+<HEAD>
+<META HTTP-EQUIV="Window-target" CONTENT="_top">
+ <title>More Pages on Wing Watchers.com</title>
+ <meta name="keywords" content="page, pages, nature, poetry, photos, odd, references, awards, links">
+<meta name="description" content="More Pages and links on Wing Watchers.com.">
+<meta name="author" content="Dave Pelletier">
+<meta name="copyright" content="Dave Pelletier A.K.A. Wing Watchers.com">
+<meta name="revisit-after" content="7 days">
+<meta http-equiv="expires" content="5/2010">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="content-language" content="en">
+<meta http-equiv="pragma" content="no-cache">
+<style>
+a{
+text-decoration:none;
+}
+</style>                                                                             </head>
+
+<body bgcolor="black" text="black" link="darkolivegreen" vlink="darkolivegreen" alink="darkolivegreen"><br>
+<center><table width="400" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+        <h1 align="center"><tt><font face="Georgia, Times New Roman, Times, serif" size="5" color="ivory">More Pages on Wing Watchers.com</font></tt></h1>
+      </td>
+  </tr>
+</table>
+<br><br>
+<table width="300" height="400" background="images1/New.jpg" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+      <td align="center"><script language="JavaScript1.2">
+
+/*
+Cross browser Marquee II- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and TOS, visit http://www.dynamicdrive.com
+Credit MUST stay intact
+*/
+
+//Specify the marquee's width (in pixels)
+var marqueewidth="300px"
+//Specify the marquee's height
+var marqueeheight="350px"
+//Specify the marquee's marquee speed (larger is faster 1-10)
+var marqueespeed=2
+//Pause marquee onMousever (0=no. 1=yes)?
+var pauseit=1
+
+//Specify the marquee's content
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+var marqueecontent='<A HREF="cathi.html">Nature Poems by Cathi</a><p><A HREF="refs.html"> References used by us.</a><p><a href="links.html">Links Page with related subjects.</a><p><a href="rings.html">Webrings we belong to.</a><p><A HREF="awards.html">Awards we received.</a><p><A HREF="misc.html">Odd Photos'
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+var actualheight=''
+var cross_marquee, ns_marquee
+
+function populate(){
+if (iedom){
+cross_marquee=document.getElementById? document.getElementById("iemarquee") : document.all.iemarquee
+cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
+cross_marquee.innerHTML=marqueecontent
+actualheight=cross_marquee.offsetHeight
+}
+else if (document.layers){
+ns_marquee=document.ns_marquee.document.ns_marquee2
+ns_marquee.top=parseInt(marqueeheight)+8
+ns_marquee.document.write(marqueecontent)
+ns_marquee.document.close()
+actualheight=ns_marquee.document.height
+}
+lefttime=setInterval("scrollmarquee()",20)
+}
+window.onload=populate
+
+function scrollmarquee(){
+
+if (iedom){
+if (parseInt(cross_marquee.style.top)>(actualheight*(-1)+8))
+cross_marquee.style.top=parseInt(cross_marquee.style.top)-copyspeed+"px"
+else
+cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
+}
+else if (document.layers){
+if (ns_marquee.top>(actualheight*(-1)+8))
+ns_marquee.top-=copyspeed
+else
+ns_marquee.top=parseInt(marqueeheight)+8
+}
+}
+
+if (iedom||document.layers){
+with (document){
+if (iedom){
+write('<div style="position:relative;width:'+marqueewidth+';height:'+marqueeheight+';overflow:hidden" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">')
+write('<div id="iemarquee" style="position:absolute;left:0px;top:0px;width:100%;">')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width='+marqueewidth+' height='+marqueeheight+' name="ns_marquee">')
+write('<layer name="ns_marquee2" width='+marqueewidth+' height='+marqueeheight+' left=0 top=0 onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed"></layer>')
+write('</ilayer>')
+}
+}
+}
+</script></td>
+  </tr>
+</table>
+<br><br>
+<table width="13%" border="0" cellspacing="0" cellpadding="4">
+  <tr>
+    <td align="center"><a href="index2.html"><font face="arial" size="+1" color="ivory"><b><i>Back</i></b></font></a></td>
+  </tr>
+</table><br><br>                                                                      <font size="3" color="ivory">This site is brought to you by:<br>
+</font><a href="http://www.cottonwoodscreations.com"><b>Cottonwoods Creations Designs and Hosting</b></a><br><br>                                                              <font face="arial" size="-1" color="ivory"><b><i>All photos, graphics, and content, unless 
+  stated otherwise, are &copy;2005-2009-Wing Watchers.com</i></b></font><br><br></center></body>
+</html>

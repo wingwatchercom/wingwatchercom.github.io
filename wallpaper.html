@@ -1,0 +1,170 @@
+<html>
+<HEAD>
+<TITLE>Wing Watchers Wallpapers</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="robots" CONTENT="noarchive">
+<META NAME="keywords" CONTENT="connecticut, birds, wings, nature, photos, flowers, insects, dragonflies, butterflies, moths, amphibians, reptiles, plants, animals, wallpapers, pictures, stories, kids, games, quizzes, sightings, species, photography, images, watchers">
+<META NAME="description" CONTENT="Come birding with us in Connecticut.Take a trip with us into the field. Enjoy daily sightings, Photos of birds, insects, plants and animals.">
+ <style type="text/css">
+
+/*set CSS for SPAN tag surrounding each image*/
+.seqslidestyle{
+margin-right: 15px;
+}
+</style>                                                                                 </HEAD>
+<BODY BACKGROUND="images1/c4.jpg" TEXT="ivory" LINK="ivory" VLINK="ivory" ALINK="ivory" bgproperties="fixed">                                      <br><br>
+ <CENTER>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="410"><tr><td><IMG SRC="images1/wwlogo2.jpg" WIDTH="409" HEIGHT="91" alt="Connecticut birding and nature"></td></tr></table><br><br>                       <table align="center" width="50%" border="2" cellspacing="2" cellpadding="2">
+ <tr>
+ <td align="center" width="100" bgcolor="lightblue"><a href="index2.html">Home</a></td>
+ <td align="center" width="100" bgcolor="red"><a href="fledglings.html">Fledglings</a></td>
+<td align="center" width="100" bgcolor="darkgreen"><a href="links.html">Links</a></td>
+<td align="center" width="100" bgcolor="purple"><a href="awards.html">Awards</a></td>               </tr>
+</table><br>                                                                                <TABLE align="center" WIDTH="50%" cellspacing="0" cellpadding="0">
+   <TR>
+  <TD ALIGN="CENTER"><FONT face="arial" color="ivory" SIZE="+3">FREE WALLPAPER</FONT>
+     </TD>
+     </TR>
+     </TABLE><BR><BR>                            
+ <TABLE align="center" WIDTH="90%" cellspacing="0" cellpadding="0">
+<TR>
+  <TD ALIGN="left"><FONT face="arial" color="ivory" SIZE="+1">There are 5 images behind the 3 boxes that keep sliding through. To see the wallpaper, just click on a sliding thumbnail. To keep the wallpaper, just right click with your mouse and select "set as wallpaper" or "set as background".<br><br>As an added attraction, my sister Cathi has contributed some wallpapers. These are made from a fractal program. Thanks, Cathi. Cathi may be contacted through her website at:<a href="http://heronwing.com/">Heronwing.com</a></FONT>
+     </TD>
+     </TR>
+     </TABLE><br><br>
+  <script type="text/javascript">
+
+/***********************************************
+* MultiFrame Image Slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var seqslides=new Array()
+//Set Path to Image plus optional URL ("" for no URL):
+seqslides[0]=["images2/wall1a.jpg", "http://www.wingwatchers.com/images2/wall1.jpg"]
+seqslides[1]=["images2/wall2a.jpg", "http://www.wingwatchers.com/images2/wall2.jpg"]
+seqslides[2]=["images2/wall3a.jpg", "http://www.wingwatchers.com/images2/wall3.jpg"]
+seqslides[3]=["images2/wall4a.jpg", "http://www.wingwatchers.com/images2/wall4.jpg"]
+seqslides[4]=["images2/wall5a.jpg", "http://www.wingwatchers.com/images2/wall5.jpg"]
+
+//Set pause between each image display (2000=2 second):
+var slidedelay=2000
+
+//Set how many images to show at once (must be less than total # of images above):
+var slidestoreveal=3
+
+//Specify code to insert between each slide (ie: "<br>" to insert a line break and create a vertical layout)
+//"" for none (or horizontal):
+var slideseparater=""
+
+//Set optional link target to be added to all images with a link:
+var optlinktarget="secwindow"
+
+//Set image border width:
+var imgborderwidth=2
+
+//Set opacity value of each image when it's "dimmed", and when it's not, respectively (1=100% opaque/normal).
+//Change 0.2 to 0 to completely hide image when it's dimmed:
+var opacityvalues=[0.2,1]
+
+///No need to edit beyond here///////////
+
+function processimgcode(theimg){
+var imghtml=""
+if (theimg[1]!="")
+imghtml='<a href="'+theimg[1]+'" target="'+optlinktarget+'">'
+imghtml+='<img src="'+theimg[0]+'" border="'+imgborderwidth+'" style="filter:alpha(opacity='+(opacityvalues[0]*100)+');-moz-opacity:'+opacityvalues[0]+'">'
+if (theimg[1]!="")
+imghtml+='</a>'
+return imghtml
+}
+
+var curslide=1 //var to track current slide (total: slidestoreveal)
+var curimgindex=0 //var to track current image (total: seqslides.length)
+var isfirstcycle=1 //boolean to indicate whether this is the first cycle
+
+if (document.getElementById){
+for (i=0;i<slidestoreveal;i++)
+document.write('<span id="seqslide'+i+'" class="seqslidestyle">'+processimgcode(seqslides[i])+'</span>'+slideseparater)
+curimgindex=slidestoreveal
+illuminateslide(0,opacityvalues[1])
+}
+
+function illuminateslide(slideindex, amt){
+var slideobj=document.getElementById("seqslide"+slideindex).getElementsByTagName("IMG")[0]
+if (slideobj.filters)
+slideobj.filters.alpha.opacity=amt*100
+else if (slideobj.style.MozOpacity)
+slideobj.style.MozOpacity=amt
+}
+
+function displayit(){
+if (curslide<slidestoreveal){
+if (!isfirstcycle)
+changeimage(curslide)
+illuminateslide(curslide, opacityvalues[1])
+curslide++
+}
+else{
+isfirstcycle=0
+for (i=0;i<slidestoreveal;i++)
+illuminateslide(i, opacityvalues[0])
+changeimage(0)
+illuminateslide(0, opacityvalues[1])
+curslide=1
+}
+}
+
+function changeimage(slideindex){
+document.getElementById("seqslide"+slideindex).innerHTML=processimgcode(seqslides[curimgindex])
+curimgindex++
+if (curimgindex>=seqslides.length)
+curimgindex=0
+}
+
+if (document.getElementById)
+setInterval("displayit()",slidedelay)
+</script>
+<p style="font: normal 12px Arial">This free script provided by<br>
+<a href="http://www.dynamicdrive.com">Dynamic Drive</a></p><br><br>                   <table align="center" width="90%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="left"><font face="arial" color="ivory" size="+1">In order to use the tiles, below, as a wallpaper you must do a few things, first. After you have right clicked on the picture and saved it as background or wallpaper, these are the steps to follow in Internet Explorer: Click "start" on your taskbar, mouse over the settings catergory and click on your "Control Panel". Find the "Display" folder and click on it. On the first panel that appears, make sure that the background option is set to "Internet Explorer Wallpaper". Right next to that box is a drop down box of options. You will see "Center, Stretch, or Tile". Click on "Tile", click "Apply", click "OK".</font></td>
+    </tr>
+  </table><br>
+  <table align="center" width="85%" border="1" cellspacing="2" cellpadding="2">
+    <tr>
+      <td align="center" width="33%"><img src="images2/tile1.jpg" width="200" height="200" alt="free tiled wallpaper"></td>
+      <td align="center" width="33%"><img src="images2/tile2.jpg" width="200" height="200" alt="free wallpaper"></td>
+      <td align="center" width="33%"><img src="images2/tile3.jpg" width="200" height="200" alt="free tiles"></td>
+      </tr>
+    <tr>
+      <td align="center" width="33%"><img src="images2/tile4.jpg" width="200" height="200" alt="free wallpaper"></td>
+      <td align="center" width="33%"><img src="images2/tile5.jpg" width="200" height="200" alt="free tiled wallpaper"></td>
+      <td align="center" width="33%"><img src="images2/tile6.jpg" width="200" height="200" alt="free wallpaper"></td>
+     </tr>
+  </table>
+  <br><br>                                                                                 <table align="center" width="50%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center"><a href="games.html"><font face="arial" color="yellow" size="+1">Play a fun game while you visit.</font></a></td>
+</tr>
+</table><BR><BR>                                                                             <TABLE ALIGN="CENTER" WIDTH="25%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <TR>
+    <TD ALIGN="CENTER"><A HREF="mailto:wingwatchers2@yahoo.com"><FONT FACE="ARIAL" COLOR="IVORY" SIZE="+2">"Contact Us"</FONT></A></TD>
+  </TR>
+</TABLE><BR><BR>                                                                                       <table align="center" width="30%" border="0" cellspacing="0" cellpadding="2">
+<tr>                                                                                   <td align="center"><font face="arial" color="ivory" size="+1"><A HREF="#TOP">Top of Page</A></font></td>                                                  </tr></table><br>         <table align="center" width="88" border="1" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center"><img src="images1/cc_blk_88x31.gif" width="88" height="31"></td>
+</tr>
+</table>
+ <table align="center" width="50%" cellspacing="0" cellpadding="0">
+<tr>                                                                                 <td align="center"><font face="arial" color="ivory" size="3">                       <A HREF="http://host.cottonwoodscreations.com/">Our Choice for Designs and Web Hosting</A></font></td>                                                     </tr></table><br><br>                                                                 <TABLE align="center" width="95%" cellspacing="0" cellpadding="0" border="0">
+<TR> 
+      <TD ALIGN="left"><FONT FACE="arial" COLOR="ivory" SIZE="-1">Except as noted, 
+        content and photographs are copyright © 2005 Dave Pelletier aka Wing Watchers, 
+        all rights reserved.</FONT></TD>
+ </TR>
+ </TABLE><BR>                                                                        
+   </CENTER>
+</BODY>                                                                                 </html>
