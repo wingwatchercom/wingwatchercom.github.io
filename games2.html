@@ -18,7 +18,7 @@
 <META NAME="RATING" CONTENT="General">
 <META NAME="revisit-after" CONTENT="15 FIFTEEN DAYS">
 <META NAME="SUBJECT" CONTENT="Nature photography">
-<META NAME="TITLE" CONTENT="Wing Watchers.com">
+<META NAME="TITLE" CONTENT="Wing Watchers.net">
 <META HTTP-EQUIV="Window-target" CONTENT="_top">
  <style>
 a{
@@ -72,9 +72,9 @@ text-decoration:none;
 		<option	value="Add.">		Addition
 		<option	value="Subt.">		Subtraction
 		<option	value="Mult.">		Multiplication
-		<option	value="Rnd ±">	Random (+  and -)
+		<option	value="Rnd ï¿½">	Random (+  and -)
 		<option	value="Rnd All">	Random all (+, -, and x)
-		
+
 	</select>
 	</th>
 
@@ -159,29 +159,29 @@ text-decoration:none;
 <tr class="sect1"><td>
 <center><h2>Instructions</h2></center>
 
-Before you begin, be sure to select the difficulty setting and math function that you want.   
-These options are at the top of the page and can only be changed after the game has stopped.   
+Before you begin, be sure to select the difficulty setting and math function that you want.
+These options are at the top of the page and can only be changed after the game has stopped.
 The difficulty option shows the range of numbers that the problem can be constructed from, (0-10 means the problem can be from 0+0 to 10+10.
 <br><br>
 
-To start a session, click on the '<b>New Player</b>' button.   
-Enter your name, then click on the '<b>Start game</b>' button to begin answering the problems.   
+To start a session, click on the '<b>New Player</b>' button.
+Enter your name, then click on the '<b>Start game</b>' button to begin answering the problems.
 To answer a problem, just click on the button under the answer you want.
 <br><br>
 
-The game will track how many answers you get right and wrong and how long it takes you to get the correct answer (in seconds).   
-You can stop the game at any time by clicking on the '<b>Stop game</b>' button.   
+The game will track how many answers you get right and wrong and how long it takes you to get the correct answer (in seconds).
+You can stop the game at any time by clicking on the '<b>Stop game</b>' button.
 This will put your current score in the Highscores area at the bottom.
 <br><br>
 
-To switch players, click on the '<b>New Player</b>' button.   
+To switch players, click on the '<b>New Player</b>' button.
 As you switch players, the previous player's score will be added to the Highscores area.
 <br><br>
 
 <center><input type=button value="Back to the game" onclick="window.location='#top'">
 <br><br>
 <FONT SIZE="2" FACE="helvetica,arial,sans-serif"><FONT COLOR="A6A6A6">
-Copyright © 2003 <a href=http://www.patricklewis.net>Patrick Lewis</a>. All rights reserved.<BR>
+Copyright ï¿½ 2003 <a href=http://www.patricklewis.net>Patrick Lewis</a>. All rights reserved.<BR>
 Reproduction in whole or in part without permission is prohibited.</FONT>
 </FONT>
 
@@ -266,7 +266,7 @@ else {	if (window.navigator.userAgent.toLowerCase().indexOf('gecko') != -1) {nav
 		WriteMessage("HighDiff" , document.Flash.diff[document.Flash.diff.selectedIndex].setting+" "+ document.Flash.func[document.Flash.func.selectedIndex].value +"<br>","add");
 		WriteMessage("HighAcc" , Accuracy.innerHTML +" ("+ Correct.innerHTML +"/"+ (Math.floor(Correct.innerHTML)+Math.floor(Missed.innerHTML)) +")<br>","add");
 		WriteMessage("HighSpeed" , Speed.innerHTML +"<br>","add");
-		WriteMessage("Response" , "<font color=#0000aa>Look at your Highscore!");	
+		WriteMessage("Response" , "<font color=#0000aa>Look at your Highscore!");
 		gamestart=false;
 		}
 	else if (navigator.family == "gecko") {
@@ -275,7 +275,7 @@ else {	if (window.navigator.userAgent.toLowerCase().indexOf('gecko') != -1) {nav
 		WriteMessage("HighDiff" ,	document.Flash.diff[document.Flash.diff.selectedIndex].setting +" "+ document.Flash.func[document.Flash.func.selectedIndex].value +"<br>","add");
 		WriteMessage("HighAcc" , 	document.getElementById("Accuracy").innerHTML +" ("+ document.getElementById("Correct").innerHTML +"/"+ (Math.floor(document.getElementById("Correct").innerHTML)+Math.floor(document.getElementById("Missed").innerHTML)) +")<br>","add");
 		WriteMessage("HighSpeed" ,	document.getElementById("Speed").innerHTML +"<br>","add");
-		WriteMessage("Response" , 	"<font color=#0000aa>Look at your Highscore!");	
+		WriteMessage("Response" , 	"<font color=#0000aa>Look at your Highscore!");
 		gamestart=false;
 		}
 	}
